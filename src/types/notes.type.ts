@@ -3,4 +3,6 @@ export interface Note {
     content: string
 }
 
-export type NotesProps = Note[];
+export interface NotesProps {
+  notes: Note[];
+}
