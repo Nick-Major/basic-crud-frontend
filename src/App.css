@@ -1,4 +1,3 @@
-/* Основные стили контейнера */
 .notes-app {
   max-width: 800px;
   margin: 0 auto;
@@ -6,101 +5,87 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Стили формы */
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.refresh-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.error-message {
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #ffebee;
+  color: #d32f2f;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .notes-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-/* Стили текстового поля */
 .notes-form textarea {
-  min-height: 150px;
-  padding: 12px;
+  min-height: 100px;
+  padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 4px;
+  font-size: 14px;
   resize: vertical;
-  transition: border-color 0.3s ease;
 }
 
-.notes-form textarea:focus {
-  outline: none;
-  border-color: #4d90fe;
-  box-shadow: 0 0 0 2px rgba(77, 144, 254, 0.2);
-}
-
-/* Стили кнопки */
 .add-btn {
-  padding: 10px 15px;
+  padding: 8px 12px;
   background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-  align-self: flex-start;
 }
 
-.add-btn:hover {
-  background-color: #45a049;
-}
-
-/* Контейнер для заметок */
 .notes-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 15px;
 }
 
-/* Стили отдельной заметки */
 .note {
   position: relative;
   background-color: #fff;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 4px;
+  padding: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
-.note:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.note-content {
-  margin-bottom: 10px;
-  line-height: 1.5;
-  color: #333;
-}
-
-/* Стили кнопки удаления */
 .delete-note-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   cursor: pointer;
-  color: #ff5252;
-  font-weight: bold;
-  opacity: 0.7;
-  transition: opacity 0.2s;
+  background: none;
+  border: none;
+  font-size: 16px;
 }
 
-.delete-note-btn:hover {
-  opacity: 1;
-}
-
-/* Сообщение при отсутствии заметок */
 .no-notes {
   text-align: center;
   color: #666;
-  font-style: italic;
   grid-column: 1 / -1;
+}
+
+.loading {
+  text-align: center;
   padding: 20px;
 }

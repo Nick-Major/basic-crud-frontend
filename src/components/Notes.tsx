@@ -7,7 +7,7 @@ const Notes = () => {
     const [notes, setNotes] = useState<Note[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
-    const API_URL = 'http://localhost:7070/notes';
+    const API_URL = 'http://localhost:3000/notes';
 
     const fetchNotes = async () => {
         setIsLoading(true);
